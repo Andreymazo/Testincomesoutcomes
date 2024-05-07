@@ -1,8 +1,3 @@
-# import re
- # r = re.compile(f"{date}")
-        # # result_lst = r.findall(lines)
-        # result_lst = list(filter(r.match, lines))
-
 
 def out_by_date(date):
     with open ('our_file.txt', 'r') as f:
