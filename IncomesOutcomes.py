@@ -2,6 +2,7 @@ import argparse
 from datetime import datetime
 import os
 import subprocess
+import os.path
 
 class IncomesOutcomes:
   
@@ -32,7 +33,7 @@ class IncomesOutcomes:
         
     """ Функция добавляет текущую дату, доход или расход, комментарий, на входе ничего"""
     # def add_current_params(self)-> str:
-    import os.path
+    
 
     def add_line(self, date, category, amount, comment ):
         file_path = 'our_file.txt'
@@ -89,7 +90,6 @@ class IncomesOutcomes:
     def update_line(self, num_line, pattern_changed, pattern_to_change):
         print('pattern_changed', pattern_changed)
         num_cell = ''
-        # proverka(self, pattern_changed)
         dic_param = {'date':1, 'category':2, 'amount':3, 'comment':4}
         for k,v in dic_param.items():
             if k == pattern_changed:
