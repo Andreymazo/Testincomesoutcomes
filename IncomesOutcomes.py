@@ -11,6 +11,7 @@ class IncomesOutcomes:
         self.category = category
         self.amount = amount
         self.comment = comment
+
     """ Функция покакзывает текущий баланс, доходы, расходы, на входе дата"""
     def show_amounts_by_date(self, date):
         print('date', date)
@@ -31,11 +32,8 @@ class IncomesOutcomes:
             print(f'Доходы  {sum(plus_lst)}')
             print(f'Расходы {sum(minus_lst)}')
         
-    """ Функция добавляет текущую дату, доход или расход, комментарий, на входе ничего"""
-    # def add_current_params(self)-> str:
-    
-
-    def add_line(self, date, category, amount, comment ):
+    """ Функция добавляет текущую дату, доход или расход, комментарий """
+    def add_line(self, date, category, amount, comment):
         file_path = 'our_file.txt'
         if os.path.exists(file_path):
             with open ('our_file.txt', 'a') as f:
