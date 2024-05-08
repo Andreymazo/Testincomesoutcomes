@@ -41,10 +41,7 @@ class IncomesOutcomes:
         else:
             with open ('our_file.txt', 'w') as f:
                 f.write(f'{date}, {category}, {amount}, {comment}')
-
-    """ Функция изменяет существующую запись, на входе дата"""
-    def update_current(self,  date: str) -> str:
-        pass
+  
     """ Функция ищет запись или записи по дате """
     def search_by_date(self, date: str)-> str:
         with open ('our_file.txt', 'r') as f:
