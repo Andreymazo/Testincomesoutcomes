@@ -55,8 +55,12 @@ class IncomesOutcomes:
                 result_i = [x.strip() for x in i.split(',')]
                 if result_i[0] == str(date):
                     result_lst.append(result_i)
-        print(result_lst)
-
+        
+        keys_lst = ['Дата', 'Категория', 'Сумма', 'Примечание']
+        dict_for_print = dict(zip(keys_lst, result_lst[0]))
+        for k,v in dict_for_print.items():
+            print(f'{k}: {v}\n')
+     
     """ Функция ищет запись или записи по категории """
     def search_by_category(self, category: str)-> str:
         with open ('our_file.txt', 'r') as f:
